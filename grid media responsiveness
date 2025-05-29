@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <section class="content">
+            <h1>Welcome to the Responsive Page</h1>
+            <p>This is an example of how Flexbox and CSS Grid help structure a webpage.</p>
+        </section>
+        <aside class="sidebar">
+            <p>Sidebar Content</p>
+        </aside>
+    </main>
+</body>
+</html>
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Container Layout using Grid */
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.content {
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+.sidebar {
+    background: #ccc;
+    padding: 20px;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
